@@ -8,7 +8,7 @@ defmodule Tutorial do
     myloop(msg, n - 1)
   end
 
-  def myloop(msg, 0), do: :ok
+  def myloop(_msg, 0), do: :ok
 
   def consume_list([head | tail]) do
     IO.puts("Head: #{head}")

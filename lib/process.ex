@@ -87,7 +87,6 @@ defmodule ProcessTutorial do
   """
   def task do
     Task.start(fn -> raise "oops" end)
-    Task.start_link()
   end
 end
 
@@ -115,7 +114,7 @@ defmodule StateIsProcess do
   以下の map を状態として保持する Task は、呼び出し元との値の受け渡しに send/receive を使う
   これはかなり低レベルで記述が多くなるので、 Agent を使ったほうがいい
   """
-  defp loop(map) do
+  def loop(map) do
     receive do
       {:get, key, caller} ->
         send(caller, Map.get(map, key))
