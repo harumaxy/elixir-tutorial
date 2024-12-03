@@ -52,6 +52,8 @@ defmodule AliasRequireImportUse do
   他の言語で言うところの継承に近い
   """
   def use_behaviour do
+    # use を使うとどんなコードも実行可能
+    # ドキュメントを読まない限り、どんな副作用が実行されていてもわからないので必要なとき以外は使わないように
   end
 
   use ExUnit.Case
