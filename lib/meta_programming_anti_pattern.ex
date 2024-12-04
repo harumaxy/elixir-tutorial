@@ -33,3 +33,6 @@ defmodule Route do
     Module.put_attribute(module, :get_route_store_for_compilation, {route, handler})
   end
 end
+
+# behaviour を実装する moduledoc に書くこと
+# use した場合に、呼び出し元の module のパブリックインターフェースへの影響を書く (栄養成分表示のようなもの)
